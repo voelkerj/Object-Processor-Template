@@ -24,6 +24,9 @@ int main(int argc, char** argv) {
   ER.register_entity(B);
   ER.register_entity(C);
 
+  // Register Size
+  std::cout << "Number of entities in register: " << ER.size() << "\n";
+
   // Print registry
   ER.print_registry(); 
 
@@ -41,6 +44,9 @@ int main(int argc, char** argv) {
     std::cout << B.name << " is in registry\n";
   else
     std::cout << B.name << " is not in registry\n";
+
+  // Register Size
+  std::cout << "Number of entities in register: " << ER.size() << "\n";
 
   // Print registry
   ER.print_registry();
