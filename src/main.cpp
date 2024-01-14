@@ -54,5 +54,12 @@ int main(int argc, char** argv) {
   // Print registry
   ER.print_registry();
 
+  // Clear registry
+  ER.clear();
+  std::cout << "Registry cleared\n";
+
+  // Print registry
+  ER.print_registry();
+
   return 0;
 }

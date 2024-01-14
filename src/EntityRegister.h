@@ -18,6 +18,7 @@ class EntityRegister {
   void unregister_entity(Entity& entity);
 
   int size();
+  void clear();
 
   Entity* operator[](int n);
 
@@ -45,6 +46,10 @@ void EntityRegister::unregister_entity(Entity& entity) {
 
 int EntityRegister::size() {
   return Entities.size();
+}
+
+void EntityRegister::clear() {
+  Entities.clear();
 }
 
 Entity* EntityRegister::operator[](int n) {
