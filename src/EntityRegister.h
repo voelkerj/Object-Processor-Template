@@ -19,6 +19,8 @@ class EntityRegister {
 
   int size();
 
+  Entity* operator[](int n);
+
   void print_registry();
 };
 
@@ -41,13 +43,16 @@ void EntityRegister::unregister_entity(Entity& entity) {
     Entities.erase(it);
 }
 
-void EntityRegister::print_registry() {
-  for (int idx = 0; idx < Entities.size(); idx++)
-    std::cout << Entities[idx] << "\n";
-}
-
 int EntityRegister::size() {
   return Entities.size();
 }
 
+Entity* EntityRegister::operator[](int n) {
+  return Entities[n];
+}
+
+void EntityRegister::print_registry() {
+  for (int idx = 0; idx < Entities.size(); idx++)
+    std::cout << Entities[idx] << "\n";
+}
 #endif

@@ -27,6 +27,9 @@ int main(int argc, char** argv) {
   // Register Size
   std::cout << "Number of entities in register: " << ER.size() << "\n";
 
+  // Read entity pointer
+  std::cout << "Entity 3: " << ER[2] << "\n";
+
   // Print registry
   ER.print_registry(); 
 
